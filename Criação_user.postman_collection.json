@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "e1880c9b-c24a-4050-999e-87100aa29df4",
+		"name": "Criação_user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34609209"
+	},
+	"item": [
+		{
+			"name": "https://petstore.swagger.io/v2/pet",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Response time is less than 200ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 7,\r\n  \"category\": {\r\n    \"id\": 8,\r\n    \"name\": \"Cachorro\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"Caramelo\"\r\n    }\r\n  ],\r\n  \"status\": \"Disponivel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://petstore.swagger.io/v2/user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 7,\r\n  \"category\": {\r\n    \"id\": 8,\r\n    \"name\": \"Cachorro\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"Caramelo\"\r\n    }\r\n  ],\r\n  \"status\": \"Disponivel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 22:39:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, DELETE, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, api_key, Authorization"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.9.v20150224)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"category\": {\n        \"id\": 8,\n        \"name\": \"Cachorro\"\n    },\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"tags\": [\n        {\n            \"id\": 3,\n            \"name\": \"Caramelo\"\n        }\n    ],\n    \"status\": \"Disponivel\"\n}"
+				}
+			]
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/pet",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 7,\r\n  \"category\": {\r\n    \"id\": 8,\r\n    \"name\": \"Cachorro\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"Caramelo\"\r\n    }\r\n  ],\r\n  \"status\": \"Disponivel\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "https://petstore.swagger.io/v2/user",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"id\": 7,\r\n  \"category\": {\r\n    \"id\": 8,\r\n    \"name\": \"Cachorro\"\r\n  },\r\n  \"name\": \"doggie\",\r\n  \"photoUrls\": [\r\n    \"string\"\r\n  ],\r\n  \"tags\": [\r\n    {\r\n      \"id\": 3,\r\n      \"name\": \"Caramelo\"\r\n    }\r\n  ],\r\n  \"status\": \"Disponivel\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://petstore.swagger.io/v2/pet",
+							"protocol": "https",
+							"host": [
+								"petstore",
+								"swagger",
+								"io"
+							],
+							"path": [
+								"v2",
+								"pet"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 29 Apr 2024 22:39:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Methods",
+							"value": "GET, POST, DELETE, PUT"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "Content-Type, api_key, Authorization"
+						},
+						{
+							"key": "Server",
+							"value": "Jetty(9.2.9.v20150224)"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 7,\n    \"category\": {\n        \"id\": 8,\n        \"name\": \"Cachorro\"\n    },\n    \"name\": \"doggie\",\n    \"photoUrls\": [\n        \"string\"\n    ],\n    \"tags\": [\n        {\n            \"id\": 3,\n            \"name\": \"Caramelo\"\n        }\n    ],\n    \"status\": \"Disponivel\"\n}"
+				}
+			]
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 12,\r\n  \"username\": \"Bruno\",\r\n  \"firstName\": \"Bruno\",\r\n  \"lastName\": \"Bruno\",\r\n  \"email\": \"Bruno\",\r\n  \"password\": \"Bruno\",\r\n  \"phone\": \"Bruno\",\r\n  \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/user",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://petstore.swagger.io/v2/pet/findByStatus?status=Disponivel",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://petstore.swagger.io/v2/pet/findByStatus?status=Disponivel",
+					"protocol": "https",
+					"host": [
+						"petstore",
+						"swagger",
+						"io"
+					],
+					"path": [
+						"v2",
+						"pet",
+						"findByStatus"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "Disponivel"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
